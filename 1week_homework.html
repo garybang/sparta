@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <style>
+        .wrap {
+            width: 600px;
+            margin: 10px auto;
+            padding: 10px;
+        }
+
+        .center-img {
+            margin: 10px;
+            margin-bottom: 30px;
+        }
+
+        .component {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            display: inline;
+            font-weight: bold;
+
+        }
+
+        .price {
+            display: inline;
+        }
+
+        .order-title {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .order-title p {
+            display: inline-block;
+        }
+
+        .order-input {
+            display: inline;
+            width: 300px;
+        }
+    </style>
+    <script>
+        function orderComplete() {
+            alert("주문이 완료 되었습니다!");
+        }
+    </script>
+    <title> 스파르타코딩클럽몰 | 토끼가 캐온 칡으로 만든 칡즙 </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="text-center center-img">
+            <img src="https://mblogthumb-phinf.pstatic.net/MjAxODAxMTlfMjc1/MDAxNTE2Mjg5NzgzODc5.nb6Ftw4SL3Ocz6CPEZTmIClrtDjuPgNPISStoK_idzcg.7pjz_xWWBlP4iz9y9ifEMjx8erVF6Z7JGoaLTGBrisYg.JPEG.annie_e/%25EA%25B0%25B1%25EB%2585%2584%25EA%25B8%25B0_%25EC%25B9%25A1%25EC%25A6%2599.jpg?type=w800"
+                class="rounded" alt="상품사진">
+        </div>
+
+        <div class="component">
+            <h3 class="title">토끼가 캐온 칡으로 만든 칡즙</h3>
+            <p class="price default-text">가격: 2000원/잔</p>
+        </div>
+
+        <div class="component">
+            <p class="default-text">이 상품으로 말할 것 같으면 용왕이 찾지 못한 토끼의 간을 찾아 빨간망토의 늑대와 아기돼지 삼형제의 숨결이 고루 녹아 있는 먹으면 120세까지 살 수
+                있다는 상품 </p>
+        </div>
+
+        <div class="component">
+            <h3 class="title">주문하기</h3>
+        </div>
+
+        <div class="componet">
+            <div>
+                <div class="order-title">
+                    <p>주문자 성함</p>
+                </div>
+                <input type=" text" class="form-control order-input" placeholder="주문자 성함">
+            </div>
+
+            <div>
+                <div class="order-title">
+                    <p>수량</p>
+                </div>
+                <select class="custom-select order-input">
+                    <option selected>주문수량</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <div class="order-title">
+                <p>주소</p>
+            </div>
+            <input type=" text" class="form-control order-input" placeholder="주소">
+        </div>
+        <div>
+            <div class="order-title">
+                <p>전화번호</p>
+            </div>
+            <input type=" text" class="form-control order-input" placeholder="전화번호">
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    <div class="text-center">
+        <button onclick="orderComplete()" type="button" class="btn btn-primary btn-lg ">주문하기</button>
+    </div>
+
+    </div>
+</body>
+
+</html>
