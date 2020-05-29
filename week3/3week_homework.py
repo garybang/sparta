@@ -19,7 +19,7 @@ songs = soup.select(
     '#body-content > div.newest-list > div > table > tbody > tr')
 for song in songs:
     rank = song.select_one('td.number')
-    rankDelete = rank.select_one('.rank').extract()
+    rank.select_one('.rank').extract()
     rank = rank.text.strip()
     if int(rank) < 10:
         rank = '0'+rank
