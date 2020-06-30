@@ -9,8 +9,8 @@ db = client.dbEx                     # 'dbEx'라는 이름의 db를 만듭니다
 def home():
    return render_template('index.html')
 
-@app.route('/list.html')
-def list():
+@app.route('/list')
+def list_page():
    return render_template('list.html')
 
 @app.route('/api/view', methods=['GET'])
@@ -20,7 +20,7 @@ def count_ex():
 
 @app.route('/api/list_view', methods=['GET'])
 def view_ex_list():
-   ex_list = list(db.exDB.find({},{'_id':False}))
+   ex_list = list(db.exDB.find({},{'_id':False, 'exImg':True, 'exTitle':True}))
    return jsonify({'result': 'success','ex_list':ex_list})
 
 if __name__ == '__main__':  

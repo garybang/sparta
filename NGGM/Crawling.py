@@ -50,6 +50,7 @@ for exID in exIDs:
     exClose_day=exClose[7:]
 
     doc = {
+        'exID': tempID,
         'exTitle': exTitle,
         'exImg' : exImg,
         'exPlace':exPlace,
@@ -60,4 +61,4 @@ for exID in exIDs:
         'exClose_month': exClose_month,
         'exClose_day': exClose_day,
     }
-    db.exDB.insert_one
+    db.exDB.insert_one(doc)
