@@ -5,7 +5,7 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 
 
-client = MongoClient('localhost', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
+client = MongoClient('mongodb://admin_gary:bang9476141!@localhost', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
 db = client.dbsparta                      # 'dbsparta'라는 이름의 db를 만듭니다.
 
 # HTML을 주는 부분

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        html {
+            margin: 0px;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        #main-row {
+            margin-bottom: 0;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        #main-nav {
+            font-family: 'Fredoka One', cursive;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+
+        #exhibit-content {
+            min-height: 100vh;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('.fixed-action-btn').floatingActionButton();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav id="main-nav">
+            <div class="nav-wrapper lime accent-3">
+                <a href="#!" class="brand-logo center">NGGM!</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card" id="exhibit-content">
+                <div class="card-image">
+                    <img src="http://www.daelimmuseum.org/front/images/dmuseum/202004/goodsplay_main.png">
+                    <a class="btn-floating halfway-fab waves-effect waves-light lime accent-3"><i
+                            class="material-icons">content_copy</i></a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">전시제목</span>
+                    <p>미술관</p>
+                    <p>전시기간</p>
+                    <p>설명</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large cyan accent-2">
+            <i class="large material-icons">date_range</i>
+        </a>
+
+    </div>
+
+    </div>
+
+    <footer class="page-footer lime accent-3">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright NGGM!
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
