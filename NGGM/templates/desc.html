@@ -42,15 +42,45 @@
             box-shadow: none;
             -webkit-box-shadow: none;
         }
-
-        #exhibit-content {
-            min-height: 100vh;
-        }
     </style>
 
     <script>
+        function show_desc() {
+            $('exhibit-content').empty();
+            $.ajax({
+                type: 'GET',
+                url: '/api/call_desc',
+                data: {},
+                success: function (response) {
+                    let ex_list = response['ex_list'];
+                    let ex_id = '{{exID}}';
+                    let ex = [];
+                    for (let i = 0; i < ex_list.length; i++) {
+                        ex = ex_list[i];
+                        if (ex['exID'] == ex_id) {
+                            break;
+                        }
+                    }
+                    let ex_img = ex['exImg'];
+                    let ex_title = ex['exTitle'];
+                    let ex_place = ex['exPlace'];
+                    let ex_opening = ex['exOpen_year'] + '.' + ex['exOpen_month'] + '.' + ex['exOpen_day']
+                    let ex_closing = ex['exClose_year'] + '.' + ex['exClose_month'] + '.' + ex['exClose_day']
+                    let temp_html = `<div class="card-image">
+                                                        <img src="${ex_img}">
+                                                    </div>   
+                                                    <div class="card-content">
+                                                        <span class="card-title">${ex_title}</span>
+                                                        <p>${ex_place}미술관</p>
+                                                        <p>${ex_opening} ~ ${ex_closing}</p>
+                                                    </div>`;
+                    $('#exhibit-content').append(temp_html)
+                }
+            });
+        }
+
         $(document).ready(function () {
-            
+            show_desc();
         });
     </script>
 
@@ -60,7 +90,7 @@
     <div class="navbar-fixed">
         <nav id="main-nav">
             <div class="nav-wrapper lime accent-3">
-                <a href="#!" class="brand-logo center">NGGM!</a>
+                <a href="/" class="brand-logo center">NGGM!</a>
             </div>
         </nav>
     </div>
@@ -68,38 +98,18 @@
     <div class="row">
         <div class="col s12">
             <div class="card" id="exhibit-content">
-                <div class="card-image">
-                    <img src="http://www.daelimmuseum.org/front/images/dmuseum/202004/goodsplay_main.png">
-                    <a class="btn-floating halfway-fab waves-effect waves-light lime accent-3"><i
-                            class="material-icons">content_copy</i></a>
-                </div>
-                <div class="card-content">
-                    <span class="card-title">전시제목</span>
-                    <p>미술관</p>
-                    <p>전시기간</p>
-                    <p>설명</p>
-                </div>
+
             </div>
 
         </div>
     </div>
 
     <div class="fixed-action-btn">
-        <a class="btn-floating btn-large cyan accent-2">
-            <i class="large material-icons">date_range</i>
+        <a class="btn-floating btn-large cyan accent-2" href="/list">
+            <i class="large material-icons">arrow_back</i>
         </a>
-
     </div>
 
-    </div>
-
-    <footer class="page-footer lime accent-3">
-        <div class="footer-copyright">
-            <div class="container">
-                © 2020 Copyright NGGM!
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>

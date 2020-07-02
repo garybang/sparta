@@ -20,7 +20,16 @@ def count_ex():
 
 @app.route('/api/list_view', methods=['GET'])
 def view_ex_list():
-   ex_list = list(db.exDB.find({},{'_id':False, 'exImg':True, 'exTitle':True}))
+   ex_list = list(db.exDB.find({},{'_id':False, 'exImg':True, 'exTitle':True, 'exID':True}))
+   return jsonify({'result': 'success','ex_list':ex_list})
+
+@app.route('/<exID>')
+def desc_page(exID):
+   return render_template('desc.html',exID=exID)
+
+@app.route('/api/call_desc')
+def view_desc():
+   ex_list = list(db.exDB.find({},{'_id':False}))
    return jsonify({'result': 'success','ex_list':ex_list})
 
 if __name__ == '__main__':  

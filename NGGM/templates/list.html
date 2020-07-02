@@ -41,6 +41,7 @@
             font-family: 'Fredoka One', cursive;
             box-shadow: none;
             -webkit-box-shadow: none;
+
         }
 
         #list-top-row {
@@ -48,6 +49,7 @@
             font-size: 3rem;
             text-align: center;
             color: #ff00c6;
+            position: relative;
         }
     </style>
     <script>
@@ -81,9 +83,10 @@
                         let ex = ex_list[i];
                         let ex_img = ex['exImg'];
                         let ex_title = ex['exTitle'];
+                        let ex_id = ex['exID'];
                         let temp_html = `<div class="card">
-                                            <div class="card-image">
-                                                <img src="${ex_img}" href="">
+                                            <div class="card-image" >
+                                                <a href="/${ex_id}"><img src="${ex_img}"></a>
                                                 <span class="card-title">${ex_title}</span>
                                             </div>
                                          </div>`;
@@ -96,7 +99,6 @@
         }
 
         $(document).ready(function () {
-            // $('.fixed-action-btn').floatingActionButton();
             show_count();
             show_list();
         });
@@ -123,25 +125,14 @@
 
         <div class="row">
             <div class="col s12" id="list_ex">
-                <!-- <div class="card">
-                    <div class="card-image">
-                        <img src="http://www.daelimmuseum.org/front/images/dmuseum/202004/goodsplay_main.png">
-                        <a class="btn-floating halfway-fab waves-effect waves-light lime accent-3"><i
-                                class="material-icons">content_copy</i></a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">굿즈모아전자상가</span>
-                    </div>
-                </div> -->
             </div>
         </div>
+    </div>
 
-        <!-- <div class="fixed-action-btn">
-            <a class="btn-floating btn-large cyan accent-2">
-                <i class="large material-icons">date_range</i>
-            </a>
-
-        </div> -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large cyan accent-2" href="../">
+            <i class="large material-icons">arrow_back</i>
+        </a>
 
     </div>
 
